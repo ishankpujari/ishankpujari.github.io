@@ -354,7 +354,10 @@
     <div class="earth">
         <div class="moon"></div>
     </div>
-    <audio id="myAudio" src="/Users/ishankpujari/Documents/Website/BackgroundSound.mp3"></audio>
+    <audio id="myAudio" controls>
+        <source src="BackgroundSound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <img id="volumeIcon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSajUeZOfDxI71NZoeHJKTg1LxHz1m1AE4WAqqSSDw4ww&s" onclick="toggleAudio()" style="width:30px;height:30px;cursor:pointer;">
     <script>
         for (var i = 0; i < 1000; i++) {
