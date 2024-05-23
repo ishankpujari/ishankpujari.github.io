@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: black;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .logoGit {
+            position: absolute; 
+            bottom: 3%;
+            left: 5%;
+            width: 100px;
+            height: auto;
+            z-index: 4;
+
+        }
+        .logoMail {
+            position: absolute; 
+            bottom: 3%;
+            right: 5%;
+            width: 80px;
+            height: auto;
+            z-index: 4;
+
+        }
+        .logoLinkedin {
+            position: absolute; 
+            bottom: 3%;
+            left: 47%;
+            width: 150px;
+            height: auto;
+            z-index: 4;
+
+        }
+        .logoResume {
+            position: absolute; 
+            top: 0%;
+            left: 7%;
+            width: 120px;
+            height: auto;
+            z-index: 4;
+
+        }
+        .logoyoutube {
+            position: absolute; 
+            top: 2%;
+            right: 5%;
+            width: 80px;
+            height: auto;
+            z-index: 4;
+
+        }
+        .typing {
+            position: absolute;
+            top: 3%;
+            right: 30%;
+            font-family:monospace;
+            width: 17.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid white;  
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+            animation: typing 4s steps(40, end), blink-caret .75s step-end infinite, hide-border 10s forwards;
+            z-index: 4;
+        }
+        .subtype {
+            position: absolute;
+            top: 10%;
+            right: 25%;
+            width: auto; 
+            font-family: monospace;
+            font-size: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid transparent;  
+            font-size: 20px;
+            color: transparent;
+            animation: typing2 4s steps(30, end) 4s, blink-caret .75s step-end infinite, hide-borders 14s forwards, color-change 1s 4s forwards;
+            z-index: 4;
+        }
+        .bottomtype {
+            position: absolute;
+            bottom: 10%;
+            right: 35%;
+            width: auto; 
+            font-family: monospace;
+            font-size: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid transparent;  
+            font-size: 20px;
+            color: transparent;
+            animation: typing2 8s steps(30, end) 4s, blink-caret .75s step-end infinite, hide-borders 14s forwards, color-change 1s 4s forwards;
+            z-index: 4;
+        }
+
+
+    @keyframes typing {
+        from { 
+            width: 0; 
+            color: white; 
+        }
+        to { 
+            width: 17.5em; 
+        }
+    }
+    @keyframes typing2 {
+    0% { 
+        width: 0; 
+    }
+    100% { 
+        width: 17.5em;
+        color: white;
+    }
+}
+@keyframes color-change {
+    0% { color: transparent; }
+    100% { color: white; } /* Keep the text white at the end of the animation */
+}
+        .sun, .mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sun {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: url('https://images.squarespace-cdn.com/content/v1/5e0f4317da60b36582422ae7/831a951f-aee3-4952-9567-5ef5ba6c996d/giphy.gif') no-repeat center center / cover;;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        .mercury, .venus {
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+        }
+        .earth {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+        }
+        .mars {
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+        }
+        .jupiter {
+            width: 100px;
+            height: 100px;
+            z-index: 2;
+        }
+        .saturn {
+            width: 80px;
+            height: 80px;
+            z-index: 2;
+        }
+        .uranus {
+            width: 80px;
+            height: 80px;
+            z-index: 2;
+        }
+        .neptune {
+            width: 80px;
+            height: 80px;
+            z-index: 2;
+        }
+        .moon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Moon_rotating_full_220px.gif') no-repeat center center / cover;;
+            border-radius: 50%;
+            animation: moonOrbit 10s linear infinite;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .asteroid {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            background: url('https://clipart-library.com/image_gallery/275592.gif') no-repeat center center / cover;
+            border-radius: 50%;
+            animation: asteroidOrbit 1000000s linear infinite, asteroidZIndex 1000000s step-end infinite; z-index: 1;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .nebula {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://clipart-library.com/images_k/cloud-transparent-png/cloud-transparent-png-23.png') no-repeat center center / cover;
+            z-index: 2; /* Put the nebula behind the other content */
+        }
+
+
+
+        .mercury {background: url('https://64.media.tumblr.com/b33c7d52e3d8a69c3c7bacf22565aa48/tumblr_mid0z4TjGC1s3yr8vo1_400.gif') no-repeat center center / cover; animation: mercuryOrbit 10s linear infinite, mercuryZIndex 10s step-end infinite; z-index: 1;}
+        .venus {background: url('https://static.wixstatic.com/media/24218d_8b6b551301124f4ea728b6d5a7011ce3~mv2.gif') no-repeat center center / cover; animation: venusOrbit 20s linear infinite, venusZIndex 20s step-end infinite; z-index: 1; }
+        .earth {background: url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Rotating_earth_%28large%29_transparent.gif') no-repeat center center / cover; animation: earthOrbit 20s linear infinite, earthZIndex 20s step-end infinite; z-index: 1;}
+        .mars {background: url('https://64.media.tumblr.com/60fb766d7ddc41658a8a14b8404838b2/6408ac8f95e277f6-33/s250x400/37b300379f1c9ef24a623ecaafdb4a982dc18227.gif') no-repeat center center / cover; animation: marsOrbit 40s linear infinite, marsZIndex 40s step-end infinite; z-index: 1;}
+        .jupiter {background: url('https://i.gifer.com/origin/55/55b8655f6eb92e0827747badf5bea873_w200.gif') no-repeat center center / cover; animation: jupiterOrbit 50s linear infinite, jupiterZIndex 50s step-end infinite; z-index: 1;}
+        .saturn { background:url('https://media3.giphy.com/media/rqSK4upZY2WfC/giphy.gif') no-repeat center center / cover;; animation: saturnOrbit 60s linear infinite, saturnZIndex 60s step-end infinite; z-index: 1;}
+        .uranus { background: url('https://images.squarespace-cdn.com/content/v1/630bb3781f3de0144b69b6ae/fe32a03e-516e-4a80-a5b9-33143591ca76/Comp+2_1.gif') no-repeat center center / cover;; animation: uranusOrbit 80s linear infinite, uranusZIndex 80s step-end infinite; z-index: 1; }
+        .neptune { background:url('https://thebluemoonofneptune.com/wp-content/uploads/2019/08/Neptune.gif') no-repeat center center / cover; animation: neptuneOrbit 80s linear infinite, neptuneZIndex 80s step-end infinite; z-index: 1;}
+
+
+@keyframes mercuryOrbit {
+    0% { transform: rotateY(0deg) translateX(300px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(300px) rotateY(-1turn); }
+}
+
+@keyframes mercuryZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes venusOrbit {
+    0% { transform: rotateY(0deg) translateX(600px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(600px) rotateY(-1turn); }
+}
+@keyframes venusZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes earthOrbit {
+    0% { transform: rotateY(0deg) translateX(900px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(900px) rotateY(-1turn); }
+}
+@keyframes earthZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes marsOrbit {
+    0% { transform: rotateY(0deg) translateX(1200px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(1200px) rotateY(-1turn); }
+}
+@keyframes marsZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes asteroidOrbit {
+    0% { transform: rotateY(0deg) translateX(1500px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(1500px) rotateY(-1turn); }
+}
+@keyframes asteroidZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes jupiterOrbit {
+    0% { transform: rotateY(0deg) translateX(1800px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(1800px) rotateY(-1turn); }
+}
+@keyframes jupiterZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes saturnOrbit {
+    0% { transform: rotateY(0deg) translateX(2100px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(2100px) rotateY(-1turn); }
+}
+@keyframes saturnZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+@keyframes uranusOrbit {
+    0% { transform: rotateY(0deg) translateX(2400px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(2400px) rotateY(-1turn); }
+}
+@keyframes uranusZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes neptuneOrbit {
+    0% { transform: rotateY(0deg) translateX(2700px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(2700px) rotateY(-1turn); }
+}
+@keyframes neptuneZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+
+@keyframes moonOrbit {
+    0% { transform: rotateY(0deg) translateX(60px) rotateY(0deg); }
+    100% { transform: rotateY(1turn) translateX(60px) rotateY(-1turn); }
+}
+@keyframes saturnZIndex {
+    0%, 50% { z-index: 2; } /* Behind the Sun */
+    50.01%, 100% { z-index: 3; } /* In front of the Sun */
+}
+#volumeIcon {
+    position: relative;
+    z-index: 1000; /* Increase this number if the volume sign is still not appearing on top */
+}
+
+
+    </style>
+</head>
+<a href="/Users/ishankpujari/Documents/UIUC/Ishank Pujari Resume().pdf"><img class="logoResume" src="https://cdn.pixabay.com/photo/2017/05/09/00/15/resume-2296951_1280.png"></a>
+
+<div class="typing">Hey there! I am Ishank Pujari</div>
+<div class="subtype">Student at University of Illinois at Urbana Champaign</div>
+<div class="bottomtype">Majoring in Computer Science</div>
+
+
+<a href="https://www.youtube.com/embed/R7zsYz8GRvk"><img class="logoyoutube" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/youtube-app-white-icon.png"></a>
+<a href="https://github.com/ishankpujari?tab=repositories"><img class="logoGit" src="https://camo.githubusercontent.com/f9f1978bdbc2c69cceae7c46d8d2e891df66b6293dfa28b84d0e34f5cde7c8b9/68747470733a2f2f7777772e73666572616c6162732e63632f77702d636f6e74656e742f75706c6f6164732f6769746875622d6c6f676f2d77686974652e706e67"></a>
+
+<a href="https://www.linkedin.com/in/ishank-pujari-454aab218/"><img class="logoLinkedin" src="https://freelogopng.com/images/all_img/1656997167linkedin-logo-white.png"></a>
+<a href="mailto:pujari.ishank@gmail.com"><img class="logoMail" src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_White_512px.png" ></a>    
+
+    <div class="sun"></div>
+    <div class="nebula"></div>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="mars"></div>
+    <div class="jupiter"></div>
+    <div class="saturn"></div>
+    <div class="uranus"></div>
+    <div class="neptune"></div>
+    <div class="earth">
+        <div class="moon"></div>
+    </div>
+    <audio id="myAudio" src="/Users/ishankpujari/Documents/Website/BackgroundSound.mp3"></audio>
+    <img id="volumeIcon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSajUeZOfDxI71NZoeHJKTg1LxHz1m1AE4WAqqSSDw4ww&s" onclick="toggleAudio()" style="width:30px;height:30px;cursor:pointer;">
+    <script>
+        for (var i = 0; i < 1000; i++) {
+            var star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * window.innerHeight + 'px';
+            star.style.left = Math.random() * window.innerWidth + 'px';
+            document.body.appendChild(star);
+        }
+        
+        function toggleAudio() {
+            var audio = document.getElementById('myAudio');
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('volumeIcon').src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTF8O0DJYOmlG5m2j2D7FJhuscr7ZZcDnrWejqszQg_Q&s';
+            } else {
+                audio.pause();
+                document.getElementById('volumeIcon').src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSajUeZOfDxI71NZoeHJKTg1LxHz1m1AE4WAqqSSDw4ww&s';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
